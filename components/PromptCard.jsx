@@ -12,6 +12,12 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
 
   const [copied, setCopied] = useState("");
 
+    const handleProfileClick = () => {
+      console.log(post);
+
+     
+    };
+
   const handleCopy = () => {
     setCopied(post.prompt);
     navigator.clipboard.writeText(post.prompt);
@@ -62,7 +68,7 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
         className="blue_gradient cursor-pointer font-inter text-sm"
         onClick={() => handleTagClick && handleTagClick(post.tag)}
       >
-        #{post.tag}
+        {post.tag}
       </p>
 
   
